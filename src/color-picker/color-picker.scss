@@ -1,0 +1,189 @@
+
+.color-picker {
+  padding: 20px;
+  width: 750px;
+
+  .color-model-picker {
+    margin-top: 20px;
+    float: left;
+    display: inline-block;
+    position: relative;
+    width: 500px;
+    height: 15px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #FF0000, #FFFF00, #00FF00, #00FFFF, #0000FF, #FF00FF, #FF0000);
+
+    .circle {
+      width: 25px;
+      height: 25px;
+      background-color: #bbb;
+      border-radius: 50%;
+      position: absolute;
+      top: calc(50% - 12px);
+      left: calc(50% - 12px);
+
+      pointer-events: none;
+
+      border: 2px solid white;
+    }
+  }
+
+
+  .temperature-brightness-picker {
+    float: left;
+    //margin-left: 250px;
+    position: relative;
+    width: 500px;
+    height: 256px;
+    //margin-top: 50px;
+
+    .canvas {
+      position: relative;
+    }
+
+    .circle {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      position: absolute;
+      /*top: calc(50% - 12px);*/
+      /*left: calc(50% - 12px);*/
+      /*top: calc(0px - 12.5px);*/
+      /*left: calc(500px - 12.5px);*/
+
+      pointer-events: none;
+
+      border: 2px solid white;
+    }
+  }
+
+  .square-picked-color {
+    float: left;
+    width: 150px;
+    height: 306px;
+    position: relative;
+
+    input {
+      font-size: 16px;
+      font-weight: bold;
+      background: transparent;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid white;
+
+      &.color-info1 {
+        width: 100px;
+        position: absolute;
+        top: 100px;
+        left: 20px;
+      }
+
+      &.color-info2 {
+        width: 100px;
+        position: absolute;
+        top: 140px;
+        left: 20px;
+      }
+    }
+
+  }
+
+  .alpha-picker {
+    display: inline-block;
+    position: relative;
+    height: 300px;
+    width: 45px;
+    margin-left: 15px;
+
+    .alpha-picker-background {
+      position: absolute;
+      background-image:
+              linear-gradient(180deg, #333 15px, white 15px),
+              linear-gradient(180deg, white 15px, #333 15px),
+              linear-gradient(180deg, #333 15px, white 15px);
+      background-position: 0 0, 15px 0, 30px 0;
+      background-repeat: repeat-y;
+      background-size: 15px 30px, 15px 30px, 15px 30px;
+      height: 300px;
+      width: 45px;
+    }
+
+    .alpha-picker-color {
+      position: absolute;
+      z-index: 1;
+      height: 300px;
+      width: 45px;
+    }
+
+    .alpha-picker-toggle {
+      position: absolute;
+      z-index: 2;
+      width: 52px;
+      height: 14px;
+      border: 4px solid #c0c0c0;
+      background: transparent;
+      //top: calc(0px - 7px);
+      left: calc(50% - 26.5px);
+
+    }
+  }
+}
+
+.square {
+  margin: 30px;
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  position: relative;
+
+  .square-background {
+    position: absolute;
+    background-image:
+            linear-gradient(180deg, #333 30px, white 30px),
+            linear-gradient(180deg, white 30px, #333 30px),
+            linear-gradient(180deg, #333 30px, white 30px),
+            linear-gradient(180deg, white 30px, #333 30px),
+            linear-gradient(180deg, #333 30px, white 30px);
+    background-position: 0 0, 30px 0, 60px 0, 90px 0, 120px 0;
+    background-repeat: repeat-y;
+    background-size: 30px 60px, 30px 60px, 30px 60px, 30px 60px, 30px 60px;
+    height: 150px;
+    width: 150px;
+  }
+
+  .square-color {
+    position: absolute;
+    z-index: 1;
+    height: 150px;
+    width: 150px;
+  }
+}
+
+.gradient {
+  margin: 20px;
+  width: 700px;
+  height: 60px;
+  display: inline-block;
+  position: relative;
+
+  .gradient-background {
+    position: absolute;
+    background-image:
+            linear-gradient(90deg, #333 20px, white 20px),
+            linear-gradient(90deg, white 20px, #333 20px),
+            linear-gradient(90deg, #333 20px, white 20px);
+    background-position: 0 0, 0 20px, 0 40px;
+    background-repeat: repeat-x;
+    background-size: 40px 20px, 40px 20px;
+    width: 700px;
+    height: 60px;
+  }
+
+  .gradient-color {
+    position: absolute;
+    z-index: 1;
+    width: 700px;
+    height: 60px;
+  }
+}
+
